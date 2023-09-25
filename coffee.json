@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Americano",
+    "description": "A classic espresso drink",
+    "price": 2.50,
+    "ingredients": [
+      {
+        "name": "Espresso",
+        "quantity": 1,
+        "unit": "shot"
+      },
+      {
+        "name": "Water",
+        "quantity": 6,
+        "unit": "oz"
+      }
+    ]
+  },
+  {
+    "name": "Latte",
+    "description": "Espresso with steamed milk",
+    "price": 4.00,
+    "ingredients": [
+      {
+        "name": "Espresso",
+        "quantity": 2,
+        "unit": "shot"
+      },
+      {
+        "name": "Milk",
+        "quantity": 8,
+        "unit": "oz"
+      }
+    ]
+  }
+]
