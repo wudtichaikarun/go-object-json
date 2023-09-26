@@ -264,3 +264,38 @@ func ConvertJsonFileToGoObjectComplex() {
 		fmt.Println()
 	}
 }
+
+func WriterGoObjectToJsonFile() {
+	coffees := []CoffeeComplex{
+		{
+			Name:        "Americano",
+			Description: "A classic espresso drink",
+			Price:       2.50,
+			Ingredients: []Ingredient{
+				{Name: "Espresso", Quantity: 1, Unit: "shot"},
+				{Name: "Water", Quantity: 6, Unit: "oz"},
+			},
+		},
+		{
+			Name:        "Latte",
+			Description: "Espresso with steamed milk",
+			Price:       4.00,
+			Ingredients: []Ingredient{
+				{Name: "Espresso", Quantity: 2, Unit: "shot"},
+				{Name: "Milk", Quantity: 8, Unit: "oz"},
+			},
+		},
+	}
+
+	file, err := os.Create("coffee-new.json")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
+
+	encoder := json.NewEncoder(file)
+	err = encoder.Encode(coffees)
+	if err != nil {
+		log.Fatal(err)
+	}
+}
