@@ -10,8 +10,8 @@ func main() {
 	// util.ConvertStructToJsonComplex()
 	// util.ConvertJsonToGoObjectSimple()
 	// util.ConvertJsonToGoObjectComplex()
-	// util.ConvertJsonFileToGoObjectComplex()
-	util.WriterGoObjectToJsonFile()
+	util.ConvertJsonFileToGoObjectComplex()
+	// util.WriterGoObjectToJsonFile()
 
 	// ** map and json **
 	// util.ConvertMapToJsonSimple()
